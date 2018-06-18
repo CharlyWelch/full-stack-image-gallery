@@ -19,5 +19,12 @@ const updateById = schema => {
     });
 };
 
+const updateOne = schema => {
+    schema.static('updateOne', function(query, update) {
+        return this.findOneAndUpdate(query, update, updateOptions);
+    });
+};
+
 mongoose.plugin(exists);
 mongoose.plugin(updateById);
+mongoose.plugin(updateOne);

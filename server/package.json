@@ -26,18 +26,19 @@
     "url": "https://github.com/CharlyWelch/full-stack-image-gallery/issues"
   },
   "homepage": "https://github.com/CharlyWelch/full-stack-image-gallery#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16",
+    "morgan": "^1.9.0",
+    "validator": "^9.4.1"
+  },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "eslint": "^4.19.1",
-    "jest": "^23.1.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.17.5"
-  },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "mongoose": "^5.1.5"
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.3"
   }
 }

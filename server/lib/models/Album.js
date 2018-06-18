@@ -8,4 +8,12 @@ const schema = new Schema({
     posterImage: RequiredString
 });
 
+schema.statics = {
+    findByQuery(query) {
+        return this.find(query)
+            .lean()
+            .select();
+    }
+};
+
 module.exports = mongoose.model('Album', schema);
