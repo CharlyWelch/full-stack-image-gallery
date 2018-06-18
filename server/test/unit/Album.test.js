@@ -2,7 +2,7 @@ const { assert } = require('chai');
 const Album = require('../../lib/models/Album');
 const { getErrors } = require('./helpers');
 
-describe('Album model tests: ', () => {
+describe('Album Model Tests: ', () => {
 
     it('Is a valid model', () => {
         const data = {
@@ -17,10 +17,11 @@ describe('Album model tests: ', () => {
         assert.isUndefined(album.validateSync());
     });
 
-    it('requires fields', () => {
+    it('Requires fields', () => {
         const album = new Album({});
         const errors = getErrors(album.validateSync(), 3);
         assert.equal(errors.title.kind, 'required');
         assert.equal(errors.description.kind, 'required');
     });
+
 });
