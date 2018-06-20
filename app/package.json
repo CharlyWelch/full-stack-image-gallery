@@ -4,7 +4,15 @@
   "description": "Express server with mongoDB on the backend, React/Redux frontend.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:prod": "npm run build && npm run copy",
+    "build": "webpack --mode production",
+    "copy": "rm -rf ../server/public && cp -R ./docs ../server/public",
+    "start": "webpack-dev-server --hot --mode development --open",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "jest": "jest",
+    "test": "npm run jest",
+    "test:watch": "npm run jest -- --watch"
   },
   "repository": {
     "type": "git",
